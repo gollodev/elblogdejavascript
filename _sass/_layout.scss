@@ -94,6 +94,10 @@
     height: 600px;
     position: relative;
     top: -1px;
+    .intro-home {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
     
     h1 {
         font-family: 'Roboto', sans-serif;
@@ -101,21 +105,21 @@
         color: $grey-color-dark;
         text-align: center;
         margin: 0;
-        padding-top: 17%;
+        
         
         @include media-query($desktop) {
             font-size: 5em;
-            padding-top: 25%;           
+                     
         }
 
         @include media-query($on-laptop) {
             font-size: 4em;
-            padding-top: 32%;
+            
         }        
 
         @include media-query($on-palm) {
             font-size: 3em;
-            padding-top: 45%;           
+                      
         }
     }
 }
