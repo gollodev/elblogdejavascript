@@ -1,23 +1,77 @@
 ---
-layout: default
+layout: home
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
+  <h1 class="page-heading">Últimos Posts</h1>
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    {% for post in site.categories.js %}        
+      <li>        
+        <div class="intro-post js">
+          <a href="{{ post.url | prepend: site.baseurl }}">             
+            <div class="post-into-preview js">
+              <h2>{{ post.title }}</h2>
+              <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d, %Y" }}
+              </span>
+              <span>Serie de: {{ post.categories[1] }}</span>
+              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+            </div>                                                     
+          </a>                        
+        </div>                     
+      </li>               
+    {% endfor %}      
+    {% for post in site.categories.node %}        
+      <li>        
+        <div class="intro-post node">
+          <a href="{{ post.url | prepend: site.baseurl }}">             
+            <div class="post-into-preview node">
+              <h2>{{ post.title }}</h2>
+              <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d, %Y" }}
+              </span>
+              <span>Serie de: {{ post.categories[1] }}</span>
+              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+            </div>                                                     
+          </a>                        
+        </div>                     
+      </li>               
     {% endfor %}
+    {% for post in site.categories.angular %}        
+      <li>        
+        <div class="intro-post angular">
+          <a href="{{ post.url | prepend: site.baseurl }}">             
+            <div class="post-into-preview angular">
+              <h2>{{ post.title }}</h2>
+              <span class="post-meta">
+                <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d, %Y" }}
+              </span>
+              <span>Serie de: {{ post.categories[1] }}</span>
+              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+            </div>                                                     
+          </a>                        
+        </div>                     
+      </li>               
+    {% endfor %}       
+    {% for post in site.categories.react %}        
+        <li>        
+          <div class="intro-post react">
+            <a href="{{ post.url | prepend: site.baseurl }}">             
+              <div class="post-into-preview react">
+                <h2>{{ post.title }}</h2>
+                <span class="post-meta">
+                  <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </span>
+                <span>Serie de: {{ post.categories[1] }}</span>
+                <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+              </div>                                                     
+            </a>                        
+          </div>                     
+        </li>               
+    {% endfor %}                                
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
