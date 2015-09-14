@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Test Angularjs Post"
-date:   2015-08-26 20:56:54
-categories: serie angular
+title:  "Test js Post"
+date:   2015-08-23 20:56:54
+categories: serie js
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur porro voluptatibus ducimus voluptatum numquam beatae maxime ea reiciendis. Natus fugiat quis nisi at assumenda exercitationem molestias magnam cum incidunt deserunt.
