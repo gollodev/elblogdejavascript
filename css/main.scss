@@ -6,21 +6,32 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 // Our variables
+$roboto: 'Roboto';
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  .8em;
 $base-line-height: 1.5;
+$intro-post-preview-font: 1.3em;
 
 $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
-$backgroundjs:	   rgb(246, 222, 60);
+$js-color:	   	   rgb(246, 222, 60);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  #323230;
+$js-color2:   	   #323230;
+
+$node-color1:	   rgb(129, 192, 3);
+$node-color2:	   rgb(41, 39, 38);
+
+$angular-color1: rgb(189, 55, 66);
+$angular-color2: rgb(242, 242, 242);
+
+$react-color1: rgb(1, 210, 247);
+$react-color2: #fff;
 
 // Width of the content area
 $content-width:    1300px;
@@ -36,6 +47,41 @@ $on-laptop:        800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+
+.node {
+	border-radius: 6px;
+    background-color: $node-color1;
+    > h2, span, p {
+    	color: $node-color2;
+    }    
+}
+
+.js {
+	border-radius: 6px;
+    background-color: $js-color;
+    > h2, span, p{
+        color: $js-color2;        
+    }
+}
+
+.react {
+	border-radius: 6px;	
+    background-color: $react-color1;
+    > h2, span, p {
+        color: $react-color2;        
+    }
+}
+
+.angular {
+	border-radius: 6px;
+    background-color: $angular-color1;
+    > h2, span, p {
+        color: $angular-color2;        
+    }
+}
+
+
+
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
