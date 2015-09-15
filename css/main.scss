@@ -12,6 +12,8 @@ $base-font-size:   16px;
 $small-font-size:  .8em;
 $base-line-height: 1.5;
 $intro-post-preview-font: 1.3em;
+$intro-post-preview-font-responsive: 1em;
+
 
 $spacing-unit:     30px;
 
@@ -48,36 +50,44 @@ $on-laptop:        800px;
 //     }
 // }
 
-.node {
-	border-radius: 6px;
+.node {	
     background-color: $node-color1;
-    > h2, span, p {
-    	color: $node-color2;
+    border-radius: 3px;
+    .node-text {
+		> h2, span, p {
+    		color: $node-color2;
+    	}   
+    } 
+}
+
+.js {	
+    background-color: $js-color;
+    border-radius: 3px;
+    .js-text {
+    	> h2, span, p {
+	        color: $js-color2;        
+	    }
     }    
 }
 
-.js {
-	border-radius: 6px;
-    background-color: $js-color;
-    > h2, span, p{
-        color: $js-color2;        
-    }
-}
-
-.react {
-	border-radius: 6px;	
+.react {		
     background-color: $react-color1;
-    > h2, span, p {
-        color: $react-color2;        
-    }
+    border-radius: 3px;
+    .react-text {
+    	> h2, span, p {
+	        color: $react-color2;        
+	    }
+    }    
 }
 
-.angular {
-	border-radius: 6px;
+.angular {	
     background-color: $angular-color1;
-    > h2, span, p {
-        color: $angular-color2;        
-    }
+    border-radius: 3px;
+    .angular-text {
+    	> h2, span, p {
+	        color: $angular-color2;        
+	    }
+    }    
 }
 
 

@@ -81,12 +81,36 @@
  */
 .intro {
     background-color: $js-color;
-    height: 612px;
+    height: 800px;
     position: relative;
     top: -1px;
+
+    @include media-query($on-palm) {
+        height: 600px;                      
+    }
+
+    @include media-query($on-laptop) {
+        height: 700px;                            
+    }
+
     .intro-home {
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding: 218px 0;
+
+        @include media-query($on-laptop) {
+            padding: 212px 0;                           
+        }
+
+        > img {
+
+            @include media-query($on-palm) {
+                height: 135px;
+                width: 170px;                      
+            }
+            @include media-query($on-laptop) {
+                height: 180px;
+                width: 220px;                      
+            }
+        }        
     }
     
     h1 {
@@ -103,13 +127,11 @@
         }
 
         @include media-query($on-laptop) {
-            font-size: 4em;
-            
+            font-size: 4em;            
         }        
 
         @include media-query($on-palm) {
-            font-size: 3em;
-                      
+            font-size: 3em;                      
         }
     }
 }
@@ -122,6 +144,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    text-align: center;
 }
 
 .footer-heading {
@@ -132,57 +155,16 @@
 .contact-list,
 .social-media-list {
     list-style: none;
-    margin-left: 0;
+    margin-left: 0;   
 }
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    color: $grey-color;    
     @extend %clearfix;
 }
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
 
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
 
 
 
@@ -204,18 +186,27 @@
     > li {
         display: inline-block;
         width: 31%;
-        height: 250px;
-        margin: 5% 1% 1% 1%;        
-    }
+        height: 230px;
+        margin: 5% 1% 1% 1%;   
+        position: relative; 
 
+        @include media-query($on-palm) {
+            width: 47%;
+            height: 180px;
+        }
+
+        @include media-query($on-laptop) {
+            width: 47%;
+            height: 200px;
+        }       
+    }
 }
 
 
-.intro-post {    
-    height: 200px;
-    border-radius: 5px;          
+.intro-post {              
     .post-into-preview {
-        padding: 70px 20px 70px 20px;
+        padding: 70px 20px 70px 20px;        
+        position: absolute;
         > h2, span, p {
             font-family: $roboto, sans-serif;
             font-weight: bold;            
@@ -223,6 +214,14 @@
         }
         > h2 {
             font-size: $intro-post-preview-font;
+
+            @include media-query($on-palm) {
+                font-size: $intro-post-preview-font-responsive;
+            }
+
+            @include media-query($on-laptop) {
+                font-size: $intro-post-preview-font-responsive;
+            }  
         }
         > span {
             font-size: $small-font-size;
@@ -237,7 +236,11 @@
             > p {
                 display: block;                
             }
-        } 
+        }
+
+        @include media-query($on-palm) {
+            padding: 30px 20px 70px 20px;
+        }     
     }   
     > a {
         text-decoration: none;

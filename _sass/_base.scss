@@ -43,6 +43,13 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+} 
+
+ul.social-media-list {
+    > li {
+        display: inline-block;
+        padding: 0 5px;
+    }
 }
 
 .img-center {
