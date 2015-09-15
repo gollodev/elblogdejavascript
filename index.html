@@ -5,73 +5,75 @@ layout: home
 <div class="home">
   <h1 class="page-heading">Últimos Posts</h1>
   <ul class="post-list">
-    {% for post in site.categories.js %}        
-      <li>        
-        <div class="intro-post js">
-          <a href="{{ post.url | prepend: site.baseurl }}">             
-            <div class="post-into-preview js">
-              <h2>{{ post.title }}</h2>
-              <span class="post-meta">
-                    <i class="fa fa-calendar"></i>
-                    {{ post.date | date: "%b %-d, %Y" }}
-              </span>
-              <span>Serie de: {{ post.categories[1] }}</span>
-              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
-            </div>                                                     
-          </a>                        
-        </div>                     
-      </li>               
-    {% endfor %}      
-    {% for post in site.categories.node %}        
-      <li>        
-        <div class="intro-post node">
-          <a href="{{ post.url | prepend: site.baseurl }}">             
-            <div class="post-into-preview node">
-              <h2>{{ post.title }}</h2>
-              <span class="post-meta">
-                    <i class="fa fa-calendar"></i>
-                    {{ post.date | date: "%b %-d, %Y" }}
-              </span>
-              <span>Serie de: {{ post.categories[1] }}</span>
-              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
-            </div>                                                     
-          </a>                        
-        </div>                     
-      </li>               
-    {% endfor %}
-    {% for post in site.categories.angular %}        
-      <li>        
-        <div class="intro-post angular">
-          <a href="{{ post.url | prepend: site.baseurl }}">             
-            <div class="post-into-preview angular">
-              <h2>{{ post.title }}</h2>
-              <span class="post-meta">
-                <i class="fa fa-calendar"></i>
-                    {{ post.date | date: "%b %-d, %Y" }}
-              </span>
-              <span>Serie de: {{ post.categories[1] }}</span>
-              <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
-            </div>                                                     
-          </a>                        
-        </div>                     
-      </li>               
-    {% endfor %}       
-    {% for post in site.categories.react %}        
-        <li>        
-          <div class="intro-post react">
+    {% for post in site.posts %}  
+      {% if post.categories[1] == 'js' %}
+        <li class="js">        
+          <div class="intro-post">
             <a href="{{ post.url | prepend: site.baseurl }}">             
-              <div class="post-into-preview react">
+              <div class="post-into-preview js-text">
                 <h2>{{ post.title }}</h2>
                 <span class="post-meta">
-                  <i class="fa fa-calendar"></i>
-                    {{ post.date | date: "%b %-d, %Y" }}
+                      <i class="fa fa-calendar"></i>
+                      {{ post.date | date: "%b %-d, %Y" }}
                 </span>
                 <span>Serie de: {{ post.categories[1] }}</span>
                 <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
-              </div>                                                     
+              </div>                                                    
             </a>                        
           </div>                     
-        </li>               
-    {% endfor %}                                
+        </li>
+      {% endif %}
+      {% if post.categories[1] == 'node' %}        
+          <li class="node">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">             
+                <div class="post-into-preview node-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                        <i class="fa fa-calendar"></i>
+                        {{ post.date | date: "%b %-d, %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %}
+      {% if post.categories[1] == 'angular' %}        
+          <li class="angular">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">             
+                <div class="post-into-preview angular-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                      {{ post.date | date: "%b %-d, %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %} 
+      {% if post.categories[1] == 'react' %}        
+          <li class="react">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">             
+                <div class="post-into-preview react-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                      {{ post.date | date: "%b %-d, %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %} 
+    {% endfor %}                                   
   </ul>
 </div>
