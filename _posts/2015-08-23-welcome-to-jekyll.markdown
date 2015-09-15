@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Lorem ipsum dolor"
 date:   2015-08-23 20:56:54
 categories: serie js
 ---
