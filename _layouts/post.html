@@ -1,15 +1,148 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>  
+    {% include header.html %} 
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    {% if page.categories[1] == 'js' %}
+      <div class="intro-post-entry js-post">        
+        <div class="intro-meta">
+          <h1 class="post-title js-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="js-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="js-text">Serie de: {{ page.categories[1] }}</span> 
+          </div> 
+        </div>                       
+      </div>     
+    {% endif %}
+    {% if page.categories[1] == 'node' %}
+      <div class="intro-post-entry node-post">        
+        <div class="intro-meta">
+          <h1 class="post-title node-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="node-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="node-text">Serie de: {{ page.categories[1] }}</span>
+          </div> 
+        </div>                       
+      </div> 
+    {% endif %} 
+    {% if page.categories[1] == 'angular' %}
+      <div class="intro-post-entry angular-post">        
+        <div class="intro-meta">
+          <h1 class="post-title angular-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="angular-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="angular-text">Serie de: {{ page.categories[1] }}</span> 
+          </div> 
+        </div>                       
+      </div> 
+    {% endif %} 
+    {% if page.categories[1] == 'react' %}
+      <div class="intro-post-entry react-post">        
+        <div class="intro-meta">
+          <h1 class="post-title react-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="react-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="react-text">Serie de: {{ page.categories[1] }}</span>  
+          </div>          
+        </div>                       
+      </div> 
+    {% endif %}   
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+    <div class="post-content">
+      <div class="wrapper">
+        <div class="post">  
+          <article class="post-entry-content">
+            {{ content }}
+            <div class="social-sharing">
+              <h1>Aprende y comparte</h1>
+              <ul class="social-sharing-list">          
+                <li>
+                  <a rel="canonical" href="https://twitter.com/share?via=elblogdejs"
+                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                    target="_blank" 
+                    title="Share on Twitter">
+                    <i class="fa fa-twitter-square fa-3x icon-tw"></i>
+                  </a>
+                </li>          
+                <li>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED_URL&t=TITLE"
+                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                    target="_blank" 
+                    title="Share on Facebook">
+                    <i class="fa fa-facebook-official fa-3x icon-fb"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/share"
+                    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480');return false;"
+                    target="_blank" 
+                    title="Share on Google+">
+                    <i class="fa fa-google-plus-square fa-3x icon-go"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/shareArticle" target="_blank">
+                    <i class="fa fa-linkedin-square fa-3x icon-link"></i>
+                  </a>
+                </li>                  
+              </ul>
+            </div>
+            <div class="author">
+              <h1>El Autor</h1>
+              <p>Gracias por tu tiempo. Me gusta recibir feedback, comparte el post, comenta y sigueme en las Redes Sociales</p>
+            <div class="social-author">              
+              <ul class="social-sharing-list">          
+                <li>
+                  <a href="https://twitter.com/gollodev" target="_blank">
+                    <i class="fa fa-twitter-square fa-3x icon-tw"></i>
+                  </a>
+                </li>          
+                <li>
+                  <a href="https://www.facebook.com/Jose-Lopez-1529378977345309" target="_blank">
+                    <i class="fa fa-facebook-official fa-3x icon-fb"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/u/0/+GolloAutumn/" target="_blank">
+                    <i class="fa fa-google-plus-square fa-3x icon-go"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/gollodev" target="_blank">
+                    <i class="fa fa-github fa-3x icon-social"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/joselopezcv" target="_blank">
+                    <i class="fa fa-linkedin-square fa-3x icon-link"></i>
+                  </a>
+                </li>                  
+              </ul>
+            </div>
 
-</div>
+            </div>
+            <div class="comments">
+              <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES * * */
+                    var disqus_shortname = 'elblogdejavascript';
+                    
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+          </article>
+        </div>        
+      </div>      
+    </div>
+
+    {% include footer.html %}     
+    
+  </body>
+</html>
