@@ -79,8 +79,7 @@
 /**
  * Intro
  */
-.intro {
-    background-color: $js-color;
+.intro {    
     height: 800px;
     position: relative;
     top: -1px;
@@ -115,8 +114,7 @@
     
     h1 {
         font-family: 'Roboto', sans-serif;
-        font-size: 6em;
-        color: $js-color2;
+        font-size: 6em;       
         text-align: center;
         margin: 0;
         
@@ -149,7 +147,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: 5px;
 }
 
 .contact-list,
@@ -172,7 +170,11 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: 50px 0;
+}
+
+.post-content {
+    padding: 160px 0;
 }
 
 .page-heading {
@@ -247,6 +249,24 @@
     }           
 }
 
+/**
+ * Intro Post
+ */
+.intro-post-entry {
+    @extend .intro;
+    .intro-meta {
+        padding: 313px 0;
+        .post-meta {
+            text-align: center;
+            margin-top: 12px;
+            > span {
+                font-family: $roboto, sans-serif;
+                font-size: $intro-post-preview-font-responsive;                
+                padding-right: 25px;
+            }
+        }              
+    }    
+}
 
 /**
  * Posts
@@ -291,4 +311,28 @@
             font-size: 18px;
         }
     }
+}
+
+.social-sharing {
+    text-align: center;
+    background-color: rgba(179,179,179,0.45);
+    padding: 50px 0;
+    margin-top: 120px;
+    > h1 {
+        font-family: $roboto, sans-serif;
+        font-size: 1.5em;
+        margin: 0;        
+    }
+    .social-sharing-list {
+        padding: 10px 0;
+        @extend .social-media-list
+    }
+}
+
+.author {
+    @extend .social-sharing;   
+}
+
+.comments {
+    margin-top: 150px;
 }

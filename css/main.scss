@@ -35,6 +35,12 @@ $angular-color2: rgb(242, 242, 242);
 $react-color1: rgb(1, 210, 247);
 $react-color2: #fff;
 
+$icon-social-color: rgba(130, 130, 130, 0.6);
+$icon-tw: #55acee;
+$icon-fb: #3B5998;
+$icon-go: #d34836;
+$icon-link: #008cc9;
+
 // Width of the content area
 $content-width:    1300px;
 $desktop:		   960px;
@@ -60,6 +66,14 @@ $on-laptop:        800px;
     } 
 }
 
+.node-post {
+	background-color: $node-color1;
+}
+
+.node-text {
+	color: $node-color2;
+}
+
 .js {	
     background-color: $js-color;
     border-radius: 3px;
@@ -68,6 +82,14 @@ $on-laptop:        800px;
 	        color: $js-color2;        
 	    }
     }    
+}
+
+.js-post {
+	background-color: $js-color;
+}
+
+.js-text {
+	color: $js-color2;
 }
 
 .react {		
@@ -80,6 +102,14 @@ $on-laptop:        800px;
     }    
 }
 
+.react-post {
+	background-color: $react-color1;
+}
+
+.react-text {
+	color: $react-color2;
+}
+
 .angular {	
     background-color: $angular-color1;
     border-radius: 3px;
@@ -88,6 +118,68 @@ $on-laptop:        800px;
 	        color: $angular-color2;        
 	    }
     }    
+}
+
+.angular-post {
+	background-color: $angular-color1;
+}
+
+.angular-text {
+	color: $angular-color2;
+}
+
+.icon-social {
+	color: $icon-social-color;
+	transition: color 1s ease;
+	-o-transition: color 1s ease;
+	-webkit-transition: color 1s ease;
+	&:hover {
+		color: $icon-social-color / 5;
+	}
+}
+
+.icon-tw {
+	color: $icon-tw;
+	transition: color .6s ease;
+	-webkit-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	&:hover {
+		color: $icon-tw  / 2;
+	}
+}
+
+.icon-fb {
+	color: $icon-fb;
+	transition: color .6s ease;
+	-webkit-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	&:hover {
+		color: $icon-fb  / 2;
+	}
+}
+
+.icon-go {
+	color: $icon-go;
+	transition: color .6s ease;
+	-webkit-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	&:hover {
+		color: $icon-go  / 2;
+	}
+}
+
+.icon-link {
+	color: $icon-link;
+	transition: color .6s ease;
+	-webkit-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	&:hover {
+		color: $icon-link / 2;
+	}
+}
+
+.padding-i {
+	padding-right: 5px;
 }
 
 
