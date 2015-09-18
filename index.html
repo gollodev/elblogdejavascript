@@ -13,8 +13,8 @@ layout: home
               <div class="post-into-preview js-text">
                 <h2>{{ post.title }}</h2>
                 <span class="post-meta">
-                      <i class="fa fa-calendar"></i>
-                      {{ post.date | date: "%b %-d, %Y" }}
+                  <i class="fa fa-calendar"></i>
+                  {{ post.date | date: "%b %-d de %Y" }}
                 </span>
                 <span>Serie de: {{ post.categories[1] }}</span>
                 <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
@@ -30,8 +30,8 @@ layout: home
                 <div class="post-into-preview node-text">
                   <h2>{{ post.title }}</h2>
                   <span class="post-meta">
-                        <i class="fa fa-calendar"></i>
-                        {{ post.date | date: "%b %-d, %Y" }}
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d de %Y" }}
                   </span>
                   <span>Serie de: {{ post.categories[1] }}</span>
                   <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
@@ -48,7 +48,7 @@ layout: home
                   <h2>{{ post.title }}</h2>
                   <span class="post-meta">
                     <i class="fa fa-calendar"></i>
-                      {{ post.date | date: "%b %-d, %Y" }}
+                    {{ post.date | date: "%b %-d de %Y" }}
                   </span>
                   <span>Serie de: {{ post.categories[1] }}</span>
                   <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
@@ -60,12 +60,12 @@ layout: home
       {% if post.categories[1] == 'react' %}        
           <li class="react">        
             <div class="intro-post">
-              <a href="{{ post.url | prepend: site.baseurl }}">             
+              <a href="{{ post.url | prepend: site.baseurl }}">      
                 <div class="post-into-preview react-text">
                   <h2>{{ post.title }}</h2>
                   <span class="post-meta">
                     <i class="fa fa-calendar"></i>
-                      {{ post.date | date: "%b %-d, %Y" }}
+                    {{ post.date | date: "%b %-d de %Y" }}
                   </span>
                   <span>Serie de: {{ post.categories[1] }}</span>
                   <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
