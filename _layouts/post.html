@@ -47,7 +47,40 @@
           </div>          
         </div>                       
       </div> 
-    {% endif %}   
+    {% endif %}
+    {% if page.categories[1] == 'backbone' %}
+      <div class="intro-post-entry backbone-post">        
+        <div class="intro-meta">
+          <h1 class="post-title backbone-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="backbone-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="backbone-text">Serie de: {{ page.categories[1] }}</span>  
+          </div>          
+        </div>                       
+      </div> 
+    {% endif %}
+    {% if page.categories[1] == 'meteor' %}
+      <div class="intro-post-entry meteor-post">        
+        <div class="intro-meta">
+          <h1 class="post-title meteor-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="meteor-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="meteor-text">Serie de: {{ page.categories[1] }}</span>  
+          </div>          
+        </div>                       
+      </div> 
+    {% endif %}
+    {% if page.categories[1] == 'polymer' %}
+      <div class="intro-post-entry polymer-post">        
+        <div class="intro-meta">
+          <h1 class="post-title polymer-text">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="polymer-text"><i class="fa fa-calendar padding-i"></i>{{ page.date | date: "%b %-d de %Y" }}</span>
+            <span class="polymer-text">Serie de: {{ page.categories[1] }}</span>  
+          </div>          
+        </div>                       
+      </div> 
+    {% endif %}     
 
     <div class="post-content">
       <div class="wrapper">
@@ -58,7 +91,7 @@
               <h1>Aprende y comparte</h1>
               <ul class="social-sharing-list">          
                 <li>
-                  <a rel="canonical" href="https://twitter.com/share?via=elblogdejs"
+                  <a rel="canonical" href="https://twitter.com/share?text={{ page.title }}&url={{ page.shortUrl }}&via=elblogdejs"
                     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                     target="_blank" 
                     title="Share on Twitter">
@@ -66,7 +99,7 @@
                   </a>
                 </li>          
                 <li>
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED_URL&t=TITLE"
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=URLENCODED_URL&t={{ page.title }}"
                     onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
                     target="_blank" 
                     title="Share on Facebook">
