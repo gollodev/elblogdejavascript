@@ -1,4 +1,4 @@
-/**
+/*
  * Site header
  */
 .site-header {
@@ -8,7 +8,6 @@
     position: relative;
     
 }
-
 .site-title {
     font-size: 26px;
     line-height: 56px;
@@ -92,11 +91,19 @@
         height: 700px;                            
     }
 
+    @include media-query-devices($on-mobile-small, 599px) {
+        height: 400px;                            
+    }
+
     .intro-home {
-        padding: 218px 0;
+        padding: 206px 0;
 
         @include media-query($on-laptop) {
             padding: 212px 0;                           
+        }
+
+        @include media-query-devices($on-mobile-small, 599px) {
+            padding: 122px 0;                           
         }
 
         > img {
@@ -108,6 +115,11 @@
             @include media-query($on-laptop) {
                 height: 180px;
                 width: 220px;                      
+            }
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                height: 100px;
+                width: 130px;                      
             }
         }        
     }
@@ -131,6 +143,10 @@
         @include media-query($on-palm) {
             font-size: 3em;                      
         }
+
+        @include media-query-devices($on-mobile-small, 599px) {
+            font-size: 2em;                     
+        }
     }
 }
 
@@ -146,7 +162,9 @@
 }
 
 .footer-heading {
+    font-family: $roboto, sans-serif;
     font-size: 18px;
+    color: $grey-color;
     margin-bottom: 5px;
 }
 
@@ -174,7 +192,7 @@
 }
 
 .post-content {
-    padding: 160px 0;
+    padding: 120px 0;
 }
 
 .page-heading {
@@ -186,21 +204,28 @@
     list-style: none;
 
     > li {
-        display: inline-block;
-        width: 31%;
+        display: inline-block;        
         height: 230px;
         margin: 5% 1% 1% 1%;   
-        position: relative; 
+        position: relative;
 
-        @include media-query($on-palm) {
-            width: 47%;
-            height: 180px;
+        @include media-query-min($desktop-hd) {
+            width: 31%;
         }
 
-        @include media-query($on-laptop) {
+        @include media-query-devices($desktop, $desktop-hd) {
+            width: 30%;
+        } 
+        
+
+        @include media-query-devices($on-palm, $desktop) {
             width: 47%;
-            height: 200px;
-        }       
+        }        
+
+        @include media-query-devices($on-mobile-small, 599px) {
+            width: 100%;
+            height: 160px;                     
+        }      
     }
 }
 
@@ -217,22 +242,34 @@
         > h2 {
             font-size: $intro-post-preview-font;
 
-            @include media-query($on-palm) {
+            @include media-query($on-laptop) {
                 font-size: $intro-post-preview-font-responsive;
             }
 
-            @include media-query($on-laptop) {
-                font-size: $intro-post-preview-font-responsive;
+            @include media-query-devices($on-mobile-small, 599px) {
+                font-size: $small-font-size;                            
             }  
         }
         > span {
             font-size: $small-font-size;
             padding-right: 12px;
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                font-size: $intro-post-preview-font-small;                            
+            }  
+
+            @include media-query($on-palm) {
+                font-size: $intro-post-preview-font-small;
+            }
         }
         > p {            
             display: none;           
             margin-top: 15px;
             position: absolute;
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                font-size: $intro-post-preview-font-small;                            
+            }  
         } 
         &:hover {
             > p {
@@ -255,14 +292,35 @@
 .intro-post-entry {
     @extend .intro;
     .intro-meta {
-        padding: 313px 0;
+        padding: 342px 0;
+
+        @include media-query-devices($on-mobile-small, 599px) {
+            padding: 163px 0;
+        }  
+        > h1 {
+            font-size: $base-post-title-font;
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                font-size: $intro-post-font-small;
+            }  
+        }
+
         .post-meta {
             text-align: center;
             margin-top: 12px;
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                margin-top: 0;
+            }
+
             > span {
                 font-family: $roboto, sans-serif;
                 font-size: $intro-post-preview-font-responsive;                
-                padding-right: 25px;
+                padding-right: 20px;
+
+                @include media-query-devices($on-mobile-small, 599px) {
+                    font-size: $intro-post-preview-font-small;
+                }  
             }
         }              
     }    
@@ -287,6 +345,22 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+
+    .post {
+        .post-entry-content {
+            > p {
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                line-height: $base-line-height;
+                color: $base-color-font;
+                
+                @include media-query-devices($on-mobile-small, 599px) {
+                    font-size: $small-font-size;
+                }
+
+            }
+        }
+    }
 
     h2 {
         font-size: 32px;
@@ -316,6 +390,7 @@
 .social-sharing {
     text-align: center;
     background-color: rgba(179,179,179,0.45);
+    color: $base-color-font;
     padding: 50px 0;
     margin-top: 120px;
     > h1 {
@@ -335,4 +410,8 @@
 
 .comments {
     margin-top: 150px;
+}
+
+.copyright {
+    margin-top: 60px;
 }

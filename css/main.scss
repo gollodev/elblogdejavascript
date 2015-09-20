@@ -7,12 +7,16 @@
 
 // Our variables
 $roboto: 'Roboto';
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  .8em;
+$base-font-family: sans-serif, Helvetica, Arial;
+$base-font-size:   1.18em;
+$small-font-size:  .9em;
 $base-line-height: 1.5;
+$base-color-font: rgba(0,0,0,0.8);
 $intro-post-preview-font: 1.3em;
-$intro-post-preview-font-responsive: 1em;
+$intro-post-preview-font-responsive: .9em;
+$intro-post-preview-font-small: .66em;
+$intro-post-font-small: 1.8em;
+$base-post-title-font: 4em;
 
 
 $spacing-unit:     30px;
@@ -35,6 +39,16 @@ $angular-color2: rgb(242, 242, 242);
 $react-color1: rgb(1, 210, 247);
 $react-color2: #fff;
 
+$backbone-color1: rgb(0, 128, 192);
+$backbone-color2: rgb(0, 43, 64);
+
+$meteor-color1: rgb(222, 79, 79);
+$meteor-color2: rgb(39, 39, 43);
+
+$polymer-color1: rgb(83, 108, 244);
+$polymer-color2: rgb(240, 240, 243);
+
+
 $icon-social-color: rgba(130, 130, 130, 0.6);
 $icon-tw: #55acee;
 $icon-fb: #3B5998;
@@ -46,6 +60,8 @@ $content-width:    1300px;
 $desktop:		   960px;
 $on-palm:          600px;
 $on-laptop:        800px;
+$on-mobile-small:  320px;
+$desktop-hd:	   1200px;	
 
 
 // Using media queries with like this:
@@ -128,6 +144,61 @@ $on-laptop:        800px;
 	color: $angular-color2;
 }
 
+.backbone {	
+    background-color: $backbone-color1;
+    border-radius: 3px;
+    .backbone-text {
+    	> h2, span, p {
+	        color: $backbone-color2;        
+	    }
+    }    
+}
+
+.backbone-post {
+	background-color: $backbone-color1;
+}
+
+.backbone-text {
+	color: $backbone-color2;
+}
+
+.meteor {	
+    background-color: $meteor-color1;
+    border-radius: 3px;
+    .meteor-text {
+    	> h2, span, p {
+	        color: $meteor-color2;        
+	    }
+    }    
+}
+
+.meteor-post {
+	background-color: $meteor-color1;
+}
+
+.meteor-text {
+	color: $meteor-color2;
+}
+
+.polymer {	
+    background-color: $polymer-color1;
+    border-radius: 3px;
+    .polymer-text {
+    	> h2, span, p {
+	        color: $polymer-color2;        
+	    }
+    }    
+}
+
+.polymer-post {
+	background-color: $polymer-color1;
+}
+
+.polymer-text {
+	color: $polymer-color2;
+}
+
+
 .icon-social {
 	color: $icon-social-color;
 	transition: color 1s ease;
@@ -183,12 +254,25 @@ $on-laptop:        800px;
 }
 
 
-
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
     }
 }
+
+@mixin media-query-min($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-devices($device-min, $device-max) {
+    @media screen and (min-width: $device-min) and (max-width: $device-max) {
+        @content;
+    }
+}
+
+
 
 
 
