@@ -2,6 +2,7 @@
 layout: post
 title:  "Streams"
 categories: serie node
+permalink: serie/node/streams
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam illo, quaerat officia blanditiis adipisci modi autem ut voluptas impedit, ea inventore quae aspernatur minus dicta tempore dignissimos amet accusantium pariatur.
