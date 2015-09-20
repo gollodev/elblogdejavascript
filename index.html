@@ -73,7 +73,58 @@ layout: home
               </a>                        
             </div>                     
           </li>               
-      {% endif %} 
+      {% endif %}
+      {% if post.categories[1] == 'backbone' %}        
+          <li class="backbone">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">      
+                <div class="post-into-preview backbone-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d de %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %}
+      {% if post.categories[1] == 'meteor' %}        
+          <li class="meteor">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">      
+                <div class="post-into-preview meteor-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d de %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %}
+      {% if post.categories[1] == 'polymer' %}        
+          <li class="polymer">        
+            <div class="intro-post">
+              <a href="{{ post.url | prepend: site.baseurl }}">      
+                <div class="post-into-preview polymer-text">
+                  <h2>{{ post.title }}</h2>
+                  <span class="post-meta">
+                    <i class="fa fa-calendar"></i>
+                    {{ post.date | date: "%b %-d de %Y" }}
+                  </span>
+                  <span>Serie de: {{ post.categories[1] }}</span>
+                  <p>Ver post Completo <i class="fa fa-arrow-right"></i></p>
+                </div>                                                     
+              </a>                        
+            </div>                     
+          </li>               
+      {% endif %}    
     {% endfor %}                                   
   </ul>
 </div>
