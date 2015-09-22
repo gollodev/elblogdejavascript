@@ -78,75 +78,101 @@
 /**
  * Intro
  */
-.intro {    
-    height: 800px;
+.intro {
+
     position: relative;
     top: -1px;
-
-    @include media-query($on-palm) {
-        height: 600px;                      
+    
+    @include media-query-min($desktop-hd) {
+        height: 900px;
     }
 
-    @include media-query($on-laptop) {
-        height: 700px;                            
+    @include media-query-devices($desktop, 1199px) {
+        height: 800px;
     }
+
+    @include media-query-devices($on-laptop, 959px) {
+        height: 700px;
+    }         
+    
+    @include media-query-devices($on-palm, 799px) {
+        height: 600px;
+    } 
 
     @include media-query-devices($on-mobile-small, 599px) {
         height: 400px;                            
     }
 
-    .intro-home {
-        padding: 206px 0;
+    .intro-home {    
 
-        @include media-query($on-laptop) {
-            padding: 212px 0;                           
+        @include media-query-min($desktop-hd) {
+            padding: 256px 0;
+        } 
+
+        @include media-query-devices($desktop, 1199px) {
+            padding: 219px 0;
         }
+
+        @include media-query-devices($on-laptop, 959px) {
+            padding: 203px 0;
+        }                 
 
         @include media-query-devices($on-mobile-small, 599px) {
             padding: 122px 0;                           
         }
+
+        @include media-query-devices($on-palm, 799px) {
+            padding: 178px 0;
+        }  
 
         > img {
 
             @include media-query($on-palm) {
                 height: 135px;
                 width: 170px;                      
-            }
-            @include media-query($on-laptop) {
+            }            
+
+            @include media-query-devices($on-laptop, 959px) {
                 height: 180px;
-                width: 220px;                      
-            }
+                width: 220px;
+            }  
 
             @include media-query-devices($on-mobile-small, 599px) {
                 height: 100px;
                 width: 130px;                      
             }
+
+            @include media-query-devices($on-palm, 799px) {
+                height: 160px;
+                width: 190px;
+            } 
         }        
     }
     
     h1 {
-        font-family: 'Roboto', sans-serif;
-        font-size: 6em;       
+        font-family: 'Roboto', sans-serif;              
         text-align: center;
         margin: 0;
         
+        @include media-query-min($desktop-hd) {
+            font-size: 6em; 
+        } 
         
-        @include media-query($desktop) {
+        @include media-query-devices($desktop, 1199px) {
             font-size: 5em;
-                     
         }
 
-        @include media-query($on-laptop) {
-            font-size: 4em;            
-        }        
-
-        @include media-query($on-palm) {
-            font-size: 3em;                      
-        }
+        @include media-query-devices($on-laptop, 959px) {
+            font-size: 4em;
+        }         
 
         @include media-query-devices($on-mobile-small, 599px) {
             font-size: 2em;                     
         }
+
+        @include media-query-devices($on-palm, 799px) {
+            font-size: 3em;
+        }   
     }
 }
 
@@ -189,7 +215,31 @@
  */
 .page-content {
     padding: 50px 0;
+    > p {
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+        color: $base-color-font;
+                
+        @include media-query-devices($on-mobile-small, 599px) {
+            font-size: $small-font-size;
+        }
+    }      
 }
+
+.page {    
+    .page-header {
+        > h1 {
+            font-family: $roboto, sans-serif;
+            font-size: $base-post-title-font;
+            text-align: center;
+
+            @include media-query-devices($on-mobile-small, 599px) {
+                font-size: $intro-post-font-small;
+            }  
+        }            
+    }             
+}  
 
 .post-content {
     padding: 120px 0;
@@ -218,9 +268,9 @@
         } 
         
 
-        @include media-query-devices($on-palm, $desktop) {
+        @include media-query-devices($on-palm, 959px) {
             width: 47%;
-        }        
+        }      
 
         @include media-query-devices($on-mobile-small, 599px) {
             width: 100%;
@@ -235,15 +285,14 @@
         padding: 70px 20px 70px 20px;        
         position: absolute;
         > h2, span, p {
-            font-family: $roboto, sans-serif;
-            font-weight: bold;            
+            font-family: $roboto, sans-serif;                        
             margin: 0;                
         }
         > h2 {
             font-size: $intro-post-preview-font;
 
             @include media-query($on-laptop) {
-                font-size: $intro-post-preview-font-responsive;
+                font-size: $small-font-size;
             }
 
             @include media-query-devices($on-mobile-small, 599px) {
@@ -297,12 +346,21 @@
         @include media-query-devices($on-mobile-small, 599px) {
             padding: 163px 0;
         }  
+
+        @include media-query-devices($on-palm, $on-laptop) {
+            padding: 302px 0;
+        }  
+
         > h1 {
             font-size: $base-post-title-font;
 
             @include media-query-devices($on-mobile-small, 599px) {
                 font-size: $intro-post-font-small;
-            }  
+            }
+
+            @include media-query-devices($on-palm, $on-laptop) {
+                font-size: $base-post-entry-font-tablet;
+            }    
         }
 
         .post-meta {
@@ -315,11 +373,15 @@
 
             > span {
                 font-family: $roboto, sans-serif;
-                font-size: $intro-post-preview-font-responsive;                
+                font-size: $small-font-size;                
                 padding-right: 20px;
 
                 @include media-query-devices($on-mobile-small, 599px) {
                     font-size: $intro-post-preview-font-small;
+                }  
+
+                @include media-query-devices($on-palm, $on-laptop) {
+                    font-size:$base-post-meta-entry-font-tablet;
                 }  
             }
         }              
