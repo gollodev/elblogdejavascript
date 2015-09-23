@@ -242,7 +242,7 @@
 }  
 
 .post-content {
-    padding: 120px 0;
+    padding: 50px 0;
 }
 
 .page-heading {
@@ -340,27 +340,49 @@
  */
 .intro-post-entry {
     @extend .intro;
-    .intro-meta {
-        padding: 342px 0;
+    .intro-meta {        
 
         @include media-query-devices($on-mobile-small, 599px) {
-            padding: 163px 0;
+            padding: 169px 0;
         }  
 
-        @include media-query-devices($on-palm, $on-laptop) {
-            padding: 302px 0;
-        }  
+        @include media-query-devices($on-palm, 799px) {
+            padding: 252px 0;
+        }
+
+        @include media-query-devices($on-laptop, 959px) {
+            padding: 297px 0;
+        }
+
+        @include media-query-devices($desktop, 1199px) {
+            padding: 342px 0;
+        }
+
+        @include media-query-min($desktop-hd) {
+            padding: 383px 0;
+        }
 
         > h1 {
-            font-size: $base-post-title-font;
-
+            
             @include media-query-devices($on-mobile-small, 599px) {
                 font-size: $intro-post-font-small;
             }
 
-            @include media-query-devices($on-palm, $on-laptop) {
+            @include media-query-devices($on-palm, 799px) {
                 font-size: $base-post-entry-font-tablet;
             }    
+
+            @include media-query-devices($on-laptop, 959px) {
+                font-size: $base-post-entry-font-desktop;
+            }
+
+            @include media-query-devices($desktop, 1199px) {
+                font-size: $base-post-title-font;
+            }
+
+            @include media-query-min($desktop-hd) {
+                font-size: $base-post-title-font-desktop-hd;
+            }
         }
 
         .post-meta {
