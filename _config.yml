@@ -2,8 +2,8 @@
 title: El Blog de JavaScript
 email: elblogdejavascript@gmail.com
 description: > # Posts de JavaScript en Español
-baseurl: "/elblogdejavascript" # the subpath of your site, e.g. /blog/
-url: "http://gollodev.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "elblogdejavascript.com" # the base hostname & protocol for your site
 
 
 
