@@ -1,7 +1,7 @@
 # Site settings
 title: El Blog de JavaScript
 email: elblogdejavascript@gmail.com
-description: > # Posts de JavaScript en Español
+description: Posts de JavaScript en Español
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "elblogdejavascript.com" # the base hostname & protocol for your site
 
