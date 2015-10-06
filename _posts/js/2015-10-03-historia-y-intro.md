@@ -2,7 +2,7 @@
 layout: post
 title: Historia y Fundamentos
 categories: serie js
-permalink: serie/js
+permalink: serie/js/historia-y-fundamentos
 ---
 
 # Una breve Historia...
