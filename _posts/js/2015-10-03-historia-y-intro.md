@@ -75,6 +75,8 @@ var valor = null;
 
 {% endhighlight %}
 
+> el nombre de la variable debe ser único, si declaras una variable con el nombre en CamelCase no es la misma que la que declaraste con minúscula siendo el mismo nombre JavaScript lo interpreta como otra variable. 
+
 para reasignar el valor de una variable solo debes volver a declarar la variable pero esta vez sin la palabra reservada __var__
 
 {% highlight javascript %}
@@ -145,7 +147,6 @@ if(nombre === 'Jose') {
 {% endhighlight %}
 
 ## Bucles
-
 un bucle tambien es una condicional, a diferencia de las demas es que se ejecuta repetidas veces hasta que sea __false__. Vamos a ver unos ejemplos con el bucle __for__.
 
 {% highlight javascript %}
@@ -218,8 +219,36 @@ while (n < 3) {
 
 {% endhighlight %}
 
+## Funciones
+Las Funciones son un bloque de código para definir una funcionalidad o tarea específica, las funciones tienen parámetros(se les llama argumentos cuando la función es invocada) y returnan un valor. Para definir una función declaramos la palabra reservada __function__ seguido el nombre de la función, seguido entre __()__ los parámetros y luego el bloque de código entre __{}__. Para invocar un función hay que llamarla, las funciones se pueden llamar cuando un evento ocurre o desde el mismo código JavaScript. Un ejemplo mas claro:
+
+{% highlight javascript %}
+ 
+function nombreDeFuncion(parametro1, parametro2, parametro3) {
+    Bloque de codigo a ejecutar
+}
+
+{% endhighlight %}
+
+las funciones retornan un valor, usando el __return__ retornamos un valor y puede parar la ejecución de la función, aqui un ejemplo de una función real
+
+{% highlight javascript %}
+ 
+function suma(numero1, numero2) {
+    return numero1 + numero2
+}
+
+suma(20, 10)
+
+// y nos retorna el valor que es 30
+
+{% endhighlight %}
+
+> en JavaScript se pueden almacenar funciones en variables mejor conocidas como __function expression__ o Funciones expresadas en español, en posts futuros cubriré mas en profundidad las funciones.
+
+
 # Conclusión
-Este es el primer post del Blog, por lo tanto, eso es lo fundamental y muy básico por ahora pero por aqui va el camino.
+Este es el primer post del Blog, por lo tanto, eso es lo fundamental y muy básico pero por ahora ya sabes que es JavaScript, un poco de su historia, sabes como declarar variables, bucles y funciones, por aqui va el camino...
 
 
 
