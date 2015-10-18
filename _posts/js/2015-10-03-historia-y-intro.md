@@ -131,17 +131,98 @@ miNumero !== 20 // "miNumero NO ES IGUAL a 20" asi que la salida es true
 
 ## Condicionales
 
-Los condicionales son estructuras de código, donde dependiendo la expresión (true o false) se ejecuta el código dentro de la condición.
+Los condicionales son estructuras de código, donde dependiendo la expresión (true o false) se ejecuta el código dentro de la condición. Declaramos la palabra reservada if, y dentro la expresión, si la expresión es true se ejecuta el __bloque de código__ de lo contrario ejecuta el __else__.
+
+{% highlight javascript %}
+
+if(expresion) {
+	Bloque de codigo
+} else {
+	bloque de codigo
+}
+
+{% endhighlight %}
+
+aca un ejemplo real:
 
 {% highlight javascript %}
 
 var nombre = 'Jose';
 
-// declaramos la palabra reservada if, y dentro la expresión.
 if(nombre === 'Jose') {
-	alert('Mi Nombre es ' + nombre) // si es true se ejecuta este alert
+	alert('Tu Nombre es ' + nombre) // si es true se ejecuta este alert
 } else {
-	alert('Ese no es mi nombre :(') // si es false se ejecuta este alert
+	alert('No encontramos tu Nombre :(') // si es false se ejecuta este alert
+}
+
+{% endhighlight %}
+
+> el alert() es una función por defecto de JavaScript, este muestra una ventana flotante en el navegador.
+
+si necesitamos una segunda condición podemos usar el __else if__ asi:
+
+{% highlight javascript %}
+
+var nombre = 'Jose';
+
+if(nombre === 'Jose') {
+	alert('Tu Nombre es Jose') // si es true se ejecuta este alert
+} else if(nombre === 'Pedro') {
+	alert('Tu Nombre es Pedro') // en caso de que sea true se ejecuta este alert
+} else {
+	alert('No encontramos tu Nombre :(') // si es false se ejecuta este alert
+}
+
+{% endhighlight %}
+
+si necesitamos evaluar muchas condiciones __switch__ podria ser la solución, __switch__ igual que __if__ evalua la expresión a diferencia que empareja la ejecución dependiendo del caso dentro del __switch__, una vista:
+
+{% highlight javascript %}
+
+switch (expresion) {
+  case valor1:
+    // se ejecuta esta sentencia cuando valor1 es true
+    [break;]
+  case valor2:
+    // se ejecuta esta sentencia cuando valor2 es true
+    [break;]
+  ...
+  case valorN:
+    // se ejecuta esta sentencia cuando valorN es true
+    [break;]
+  default:
+    // se ejecuta cuando ningun valor coincide con la expresion.
+    [break;]
+}
+
+{% endhighlight %}
+
+> el __break__ se encarga de parar el programa en el caso si coincide si no __break__ es omitido y continua la ejecución del programa.
+
+aca un ejemplo:
+
+{% highlight javascript %}
+
+var nombre = 'Jose';
+
+switch (nombre) {
+  case "Pedro":
+    alert("Tu Nombre es Pedro!");
+    break;
+  case "Juan":
+    alert("Tu Nombre es Juan!");
+    break;
+  case "Carlos":
+    alert("Tu Nombre es Carlos");
+    break;
+  case "Jose":
+    alert("Tu Nombre es Jose!");
+    break;  
+  case "Maria":
+    alert("Tu Nombre es Maria!");
+    break;
+  default:
+    alert("No encontramos tu nombre :(");
 }
 
 {% endhighlight %}
@@ -246,9 +327,37 @@ suma(20, 10)
 
 > en JavaScript se pueden almacenar funciones en variables mejor conocidas como __function expression__ o Funciones expresadas en español, en posts futuros cubriré mas en profundidad las funciones.
 
+## Manejo de Errores
+Para manejar errores en JavaScript usamos en __try...catch__ como en muchos otros lenguajes de programación, marcamos una sentencia dentro del __try__ a ser evaluada si esta consigue un error en la sentencia la excepción pasa al __catch__. la sintaxis se ve asi:
+
+{% highlight javascript %}
+ 
+try {
+	// sentencia a evaluar
+} catch (excepcion) {
+	// sentencia a ser evaluada
+} finally {
+	// sentencia final 
+}
+
+{% endhighlight %}
+
+> las declaraciones en el __finally__ se ejecutan cuando termina el __try__ encuentre error o no.
+
+{% highlight javascript %}
+ 
+try {
+   throw "myError"; // disparamos un error a proposito
+}
+catch (e) {
+   // declaracion a manejar excepción
+   console.log(e); // e* es el objeto a manejar la excepción 
+}
+
+{% endhighlight %}
 
 # Conclusión
-Este es el primer post del Blog, por lo tanto, eso es lo fundamental y muy básico pero por ahora ya sabes que es JavaScript, un poco de su historia, sabes como declarar variables, bucles y funciones, por aqui va el camino...
+Este es el primer post del Blog, por lo tanto, eso es lo fundamental y muy básico pero por ahora ya sabes que es JavaScript, un poco de su historia, sabes como declarar variables, bucles y funciones, manejar errores, por aqui va el camino...
 
 
 
