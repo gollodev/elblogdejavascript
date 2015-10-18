@@ -557,7 +557,6 @@ Los modificadores son usados para buscar coincidencias entre mayúsculas, minús
 |     [^abc] 	| Encuentra cualquier carácter que no este entre los corchetes. |
 |     [0-9]     | Encuentra cualquier dígito entre los corchetes. |
 |     [^0-9]    | Encuentra cualquier dígito que no este entre los corchetes. |
-|     (x|y)     | Encuentra cualquiera de las alternativa (ya sea x o y por ejemplo). |
 
 ### Metacarácteres
 

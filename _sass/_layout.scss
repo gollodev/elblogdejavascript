@@ -434,9 +434,10 @@
         .post-entry-content {
             > p {
                 font-family: $base-font-family;
-                font-size: $base-font-size;
+                font-size: $base-font-size-post;
                 line-height: $base-line-height;
                 color: $base-color-font;
+                margin: 0;
                 
                 @include media-query-devices($on-mobile-small, 599px) {
                     font-size: $small-font-size;
@@ -444,19 +445,22 @@
 
             }
         }
-    }
+    }    
 
-    h1, h2, h3 {
-        margin: 30px 0 5px 0;
+    h1, h2, h3, h4, h5 {
+        margin: 0;
+        color: $js-color2;
+        font-weight: bold;      
     }
 
     h1 {
         font-size: 40px;
+        margin-top: 60px;
     }
 
     h2 {
         font-size: 26px;
-
+        margin-top: 30px;
         @include media-query($on-laptop) {
             font-size: 22px;
         }
@@ -464,7 +468,7 @@
 
     h3 {
         font-size: 22px;
-
+        margin-top: 20px;
         @include media-query($on-laptop) {
             font-size: 18px;
         }
@@ -472,7 +476,7 @@
 
     h4 {
         font-size: 20px;
-
+        margin-top: 10px;
         @include media-query($on-laptop) {
             font-size: 18px;
         }
