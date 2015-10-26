@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vectores y Cadenas de Caracteres
+title: Vectores y Cadenas de Carácteres
 categories: serie js
 permalink: serie/js/vectores-cadenas
 ---
