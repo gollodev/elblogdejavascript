@@ -359,7 +359,7 @@
         }
 
         @include media-query-min($desktop-hd) {
-            padding: 383px 0;
+            padding: 383px 120px;
         }
 
         > h1 {
@@ -387,7 +387,7 @@
 
         .post-meta {
             text-align: center;
-            margin-top: 12px;
+            margin-top: 30px;
 
             @include media-query-devices($on-mobile-small, 599px) {
                 margin-top: 0;
@@ -404,6 +404,10 @@
 
                 @include media-query-devices($on-palm, $on-laptop) {
                     font-size:$base-post-meta-entry-font-tablet;
+                }
+
+                @include media-query-min($desktop-hd) {
+                    font-size: $base-font-size-post;
                 }  
             }
         }              
