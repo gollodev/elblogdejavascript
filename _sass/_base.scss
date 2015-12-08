@@ -43,7 +43,7 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
-} 
+}
 
 ul.social-media-list {
     > li {
@@ -182,6 +182,22 @@ pre {
     }
 }
 
+.wrapper-post {
+    max-width: -webkit-calc(#{$content-width-post} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width-post} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width-post} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width-post} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
 
 
 /**
@@ -201,12 +217,11 @@ table {
     border: 1px solid $grey-color;
 
     thead {
-        background-color: $grey-color;       
-        tr {            
+        background-color: $grey-color;
+        tr {
             th {
                 padding-right: 74px;
             }
         }
     }
 }
-

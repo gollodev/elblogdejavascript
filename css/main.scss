@@ -4,14 +4,15 @@
 @charset "utf-8";
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lora);
 
 // Our variables
 $roboto: 'Roboto';
-$base-font-family: sans-serif, Helvetica, Arial;
+$base-font-family: 'Lora';
 $base-font-size:   1.18em;
-$base-font-size-post: 1em;
+$base-font-size-post: 1.1em;
 $small-font-size:  .8em;
-$base-line-height: 1.5;
+$base-line-height: 1.8;
 $intro-post-preview-font: 1.1em;
 $intro-post-preview-font-small: .66em;
 $intro-post-font-small: 1.8em;
@@ -60,11 +61,12 @@ $icon-link: #008cc9;
 
 // Width of the content area
 $content-width:    1300px;
-$desktop:		   960px;
+$content-width-post: 1000px;
+$desktop:		       960px;
 $on-palm:          600px;
 $on-laptop:        800px;
 $on-mobile-small:  320px;
-$desktop-hd:	   1200px;	
+$desktop-hd:	     1200px;
 
 
 // Using media queries with like this:
@@ -75,14 +77,14 @@ $desktop-hd:	   1200px;
 //     }
 // }
 
-.node {	
+.node {
     background-color: $node-color1;
     border-radius: 3px;
     .node-text {
 		> h2, span, p {
     		color: $node-color2;
-    	}   
-    } 
+    	}
+    }
 }
 
 .node-post {
@@ -93,14 +95,14 @@ $desktop-hd:	   1200px;
 	color: $node-color2;
 }
 
-.js {	
+.js {
     background-color: $js-color;
     border-radius: 3px;
     .js-text {
     	> h2, span, p {
-	        color: $js-color2;        
+	        color: $js-color2;
 	    }
-    }    
+    }
 }
 
 .js-post {
@@ -111,14 +113,14 @@ $desktop-hd:	   1200px;
 	color: $js-color2;
 }
 
-.react {		
+.react {
     background-color: $react-color1;
     border-radius: 3px;
     .react-text {
     	> h2, span, p {
-	        color: $react-color2;        
+	        color: $react-color2;
 	    }
-    }    
+    }
 }
 
 .react-post {
@@ -129,14 +131,14 @@ $desktop-hd:	   1200px;
 	color: $react-color2;
 }
 
-.angular {	
+.angular {
     background-color: $angular-color1;
     border-radius: 3px;
     .angular-text {
     	> h2, span, p {
-	        color: $angular-color2;        
+	        color: $angular-color2;
 	    }
-    }    
+    }
 }
 
 .angular-post {
@@ -147,14 +149,14 @@ $desktop-hd:	   1200px;
 	color: $angular-color2;
 }
 
-.backbone {	
+.backbone {
     background-color: $backbone-color1;
     border-radius: 3px;
     .backbone-text {
     	> h2, span, p {
-	        color: $backbone-color2;        
+	        color: $backbone-color2;
 	    }
-    }    
+    }
 }
 
 .backbone-post {
@@ -165,14 +167,14 @@ $desktop-hd:	   1200px;
 	color: $backbone-color2;
 }
 
-.meteor {	
+.meteor {
     background-color: $meteor-color1;
     border-radius: 3px;
     .meteor-text {
     	> h2, span, p {
-	        color: $meteor-color2;        
+	        color: $meteor-color2;
 	    }
-    }    
+    }
 }
 
 .meteor-post {
@@ -183,14 +185,14 @@ $desktop-hd:	   1200px;
 	color: $meteor-color2;
 }
 
-.polymer {	
+.polymer {
     background-color: $polymer-color1;
     border-radius: 3px;
     .polymer-text {
     	> h2, span, p {
-	        color: $polymer-color2;        
+	        color: $polymer-color2;
 	    }
-    }    
+    }
 }
 
 .polymer-post {
