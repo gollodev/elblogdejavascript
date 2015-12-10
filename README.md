@@ -1,3 +1,6 @@
+# El Blog de JavaScript
+Posts about JavaScript in Spanish by Jose Lopez.
+
 # The code under MIT License
 The MIT License (MIT)
 Copyright (c) 2015 Jose Lopez
