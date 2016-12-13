@@ -192,7 +192,7 @@ estas condiciones son representadas por tres comunes estados:
 - __Rechazada__: La operación no puede ser completada.
 
 Nos referimos a los estados __Completada__ y __Rechazada__ como exitosamente y error, el estado __Pendiente__ puede ser diferente, porque una __Promesa__ puede ser __Completada__ con un error, y cuando una operación no puede
-ser __Completada__ no regresa ningun error, en resumen: __Completada__ es cuando la __Promesa__ es completada y retorna el valor exitosamente y __Rechazada__ cuando la __Promesa__ retorna un error.
+ser __Completada__ no regresa ningun error, en resumen: __Completada__ es cuando la __Promesa__ cumple su ejecución y retorna el valor exitosamente y __Rechazada__ cuando la __Promesa__ retorna un error.
 
 ## Encadenamiento
 Como hemos visto, los métodos __then()__ y __catch()__ retornan el valor de la __Promesa__ y así podemos encadenar los métodos facilmente, en caso de encadenar otro método no es la misma __Promesa__ que regresa, es creada
